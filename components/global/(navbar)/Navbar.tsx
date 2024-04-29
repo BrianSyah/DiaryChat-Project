@@ -1,0 +1,18 @@
+import Link from "next/link";
+import React from "react";
+import NavbarButton from "./NavbarButton";
+
+const Navbar = (): React.ReactElement => {
+  return (
+    <div className="navbar bg-base-100 mb-[-20px]">
+      <div className="container flex mx-auto justify-between p-4 bg-sky-950 rounded">
+        <Link href="/" className="text-xl font-bold">
+          OpenDiary
+        </Link>
+        <NavbarButton />
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
