@@ -43,9 +43,13 @@ const CommentList = async ({ diary_id }: ParamsProps) => {
                 />
               </div>
             </div>
-            <div className="chat-header font-semibold text-md">
-              {comment.username || comment.email}
-              <time className="text-xs opacity-50"> | {posted_time}</time>
+            <div className="chat-header font-semibold text-md flex">
+              <p className="text-md xl:ml-2 md:ml-0 mt-3">
+                {comment.username || comment.email}
+              </p>
+              <time className="text-xs opacity-50 mt-4 ml-1">
+                | {posted_time}
+              </time>
             </div>
             <div className="chat-bubble">{comment.content}</div>
             <div className="chat-footer opacity-50">Delivered</div>

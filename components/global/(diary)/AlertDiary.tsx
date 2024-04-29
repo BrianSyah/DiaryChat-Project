@@ -11,7 +11,7 @@ function AlertDiary(): React.ReactElement {
         exit={{ opacity: 0, y: 15 }}
         transition={{ delay: 0.25 }}
       >
-        <div role="alert" className="alert alert-warning mb-4">
+        <div role="alert" className="alert alert-warning xl:my-7 my-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="stroke-current shrink-0 h-6 w-6"

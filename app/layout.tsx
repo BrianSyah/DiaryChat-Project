@@ -7,8 +7,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "OpenDiary",
-  description: "Open Diary Opensource Project",
+  title: "Project DiaryChat",
+  description: "Self Proeject DiaryChat",
 };
 
 export default function RootLayout({
