@@ -23,7 +23,7 @@ const CommentList = async ({ diary_id }: ParamsProps) => {
   if (!data.comments?.length) return null;
 
   // Mengonversi tanggal yang diposting menjadi format yang lebih mudah dibaca
-  const posted_time = new Date(data.created_at).toLocaleTimeString(); // get time
+  // get time
   // Mengembalikan elemen JSX untuk menampilkan daftar komentar
   return (
     <div className="flex flex-col gap-4">
@@ -47,9 +47,9 @@ const CommentList = async ({ diary_id }: ParamsProps) => {
               <p className="text-md xl:ml-2 md:ml-0 mt-3">
                 {comment.username || comment.email}
               </p>
-              <time className="text-xs opacity-50 mt-4 ml-1">
-                | {posted_time}
-              </time>
+              {/* <i className="text-xs opacity-50 mt-4 ml-1">
+                | <PostTime past_time={data.comment.created_at} />
+              </i> */}
             </div>
             <div className="chat-bubble">{comment.content}</div>
             <div className="chat-footer opacity-50">Delivered</div>

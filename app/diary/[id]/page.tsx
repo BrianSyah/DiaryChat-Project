@@ -1,5 +1,6 @@
 import CreateCommentForm from "@/components/auth/CreateCommentForm";
 import CommentList from "@/components/global/(diary)/CommentList";
+import PostTime from "@/components/global/(diary)/PostTime";
 import Wrapper from "@/components/global/Wrapper";
 import { supabase } from "@/utils/supabase";
 import Image from "next/image";
@@ -38,8 +39,9 @@ const page = async ({ params }: ParamsProps) => {
             height={250}
             className="rounded-md"
           />
-          <i className="text-center font-light">Posted at {posted_time}</i>
-          <i className="text-center text-sm font-light">{posted_date}</i>
+          <i className="text-center font-light">
+            Posted at <PostTime past_time={data.created_at} />
+          </i>
         </div>
         {/* Tampilkan email atau username */}
         <h3 className="italic xl:text-xl font-semibold">
